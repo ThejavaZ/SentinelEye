@@ -1,3 +1,5 @@
 .venv/
 .env
 __pycache__/
+*.pt
+/yolov8n.pt

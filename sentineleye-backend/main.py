@@ -1,3 +1,4 @@
+import uvicorn as uv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -44,3 +45,14 @@ def root():
         "project": settings.PROJECT_NAME,
         "message": "Industrial Security Monitoring AI Backend is running."
     }
+    
+def main():
+    uv.run(
+        "main:app", 
+        host="0.0.0.0", 
+        port=8000, 
+        reload=True
+    )
+
+if __name__ == "__main__":
+    main()
